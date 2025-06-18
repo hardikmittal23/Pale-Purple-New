@@ -1,0 +1,2 @@
+install django by pip install django
+run this write python manage.py runserver to run

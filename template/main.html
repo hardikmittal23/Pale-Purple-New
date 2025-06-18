@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} | Pale Purple By Yashvi Gautam</title>
+    <link rel="stylesheet" href="{% static 'style/pp.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- {% block styles %}{% endblock %} -->
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="{% static 'images/Logo.jpg' %}" alt="logo"> <span></span></a>
+        <div class="header-content">
+            <nav>
+                <ul>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#gallery">Collections</a></li>
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Flagship Items</a></li>
+                    <li><a href="{% url 'about' %}">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    {% block content %}{% endblock %}
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="about">Our Story</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://instagram.com/live_with_yashvi"><i class="fab fa-instagram"></i></a>
+                    <a href="##"><i class="fab fa-facebook"></i></a>
+                    <a href="https://wa.me/918920640947"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Pale Purple. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div class="floating-social-buttons">
+        <a href="https://wa.me/918920640947" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://instagram.com/live_with_yashvi" class="instagram-float" target="_blank" title="Instagram">
+            <i class="fab fa-instagram"></i>
+        </a>
+    </div>
+    {% block scripts %}{% endblock %}
+    </body>
+</html>
