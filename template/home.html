@@ -7,13 +7,13 @@
 <section class="slideshow-section">
     <div class="slideshow-container">
         <div class="slide fade">
-            <img src="{% static 'images/demo.jpg' %}" alt="Slide 1">
+            <img src="{% static 'images/casualthread.jpg' %}" alt="Slide 1">
         </div>
         <div class="slide fade">
             <video src="{% static 'videos/video.mp4' %}" controls muted></video>
         </div>
         <div class="slide fade">
-            <img src="{% static 'images/casualthreads.jpg' %}" alt="Slide 2">
+            <img src="{% static 'images/casualthread.jpg' %}" alt="Slide 2">
         </div>
         <div class="slide fade">
             <video src="{% static 'videos/video.mp4' %}" controls muted></video>
@@ -31,7 +31,6 @@
 </section>
 
 <section class="gallery-section" id="gallery">
-    <script src="{% static 'assets/js/server.js' %}"></script>
     <h2>Our Collection</h2>
     <div class="gallery">
         <div class="gallery-item">
@@ -62,5 +61,5 @@
 
 
 {% block scripts %}
-
+<script src="{% static 'js/script.js' %}"></script>
 {%endblock %}
